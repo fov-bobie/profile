@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ゲーマープロフィール</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#4F46E5',secondary:'#6B7280'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Noto Sans JP', sans-serif;
+background-color: #f9f5f3;
+}
+.game-card:hover {
+transform: translateY(-2px);
+box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+</style>
+</head>
+<body>
+<div class="min-h-screen flex flex-col">
+<header class="bg-white shadow-sm">
+<div class="container mx-auto px-4 py-4">
+<h1 class="text-2xl font-bold">プロフィール</h1>
+</div>
+</header>
+<main class="flex-grow container mx-auto px-4 py-8">
+<div class="bg-white rounded-lg shadow-sm overflow-hidden">
+<div class="p-6">
+<div class="flex flex-col md:flex-row gap-8 mb-8">
+<div class="w-full md:w-1/3 lg:w-1/4">
+<div class="bg-white rounded-lg overflow-hidden">
+<img src="https://static.readdy.ai/image/aac868023708da198254c7b0552cd3ea/44363c15a54d6a0abc556136f32cdf97.png" alt="プロフィール画像" class="w-full h-auto object-cover rounded-lg">
+<div class="p-4">
+<div class="mb-4 flex items-center gap-3">
+<div class="w-6 h-6 flex items-center justify-center bg-blue-500/10 rounded-full">
+<i class="ri-user-line text-blue-500"></i>
+</div>
+<div>
+<span class="text-gray-500 text-sm">名前:</span>
+<h2 class="text-xl font-bold">田中
+</h2>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-6 h-6 flex items-center justify-center bg-primary/10 rounded-full">
+<i class="ri-gamepad-line text-primary"></i>
+</div>
+<div>
+<span class="text-gray-500 text-sm">ゲーマー名:</span>
+<h3 class="text-lg font-medium text-primary">黒夜色</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-2/3 lg:w-3/4 grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<h3 class="text-lg font-bold mb-4 flex items-center">
+<span class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-full mr-2">
+<i class="ri-gamepad-line text-primary"></i>
+</span>
+プレイ中のゲーム:
+</h3>
+<ul class="space-y-3">
+<li class="game-card bg-white border border-gray-100 rounded p-3 flex items-center transition-all duration-200">
+<div class="w-8 h-8 flex items-center justify-center bg-red-500/10 rounded mr-3">
+<i class="ri-sword-line text-red-500"></i>
+</div>
+<span>VALORANT</span>
+</li>
+<li class="game-card bg-white border border-gray-100 rounded p-3 flex items-center transition-all duration-200">
+<div class="w-8 h-8 flex items-center justify-center bg-orange-500/10 rounded mr-3">
+<i class="ri-fire-line text-orange-500"></i>
+</div>
+<span>RUST</span>
+</li>
+<li class="game-card bg-white border border-gray-100 rounded p-3 flex items-center transition-all duration-200">
+<div class="w-8 h-8 flex items-center justify-center bg-purple-500/10 rounded mr-3">
+<i class="ri-ghost-line text-purple-500"></i>
+</div>
+<span>Dark and Darker</span>
+</li>
+<li class="game-card bg-white border border-gray-100 rounded p-3 flex items-center transition-all duration-200">
+<div class="w-8 h-8 flex items-center justify-center bg-green-500/10 rounded mr-3">
+<i class="ri-crosshair-line text-green-500"></i>
+</div>
+<span>PUBG</span>
+</li>
+<li class="game-card bg-white border border-gray-100 rounded p-3 flex items-center transition-all duration-200">
+<div class="w-8 h-8 flex items-center justify-center bg-blue-500/10 rounded mr-3">
+<i class="ri-puzzle-line text-blue-500"></i>
+</div>
+<span>KLETKA</span>
+</li>
+<li class="game-card bg-white border border-gray-100 rounded p-3 flex items-center transition-all duration-200">
+<div class="w-8 h-8 flex items-center justify-center bg-yellow-500/10 rounded mr-3">
+<i class="ri-robot-line text-yellow-500"></i>
+</div>
+<span>R.E.P.O.</span>
+</li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-bold mb-4 flex items-center">
+<span class="w-8 h-8 flex items-center justify-center bg-secondary/10 rounded-full mr-2">
+<i class="ri-game-line text-secondary"></i>
+</span>
+プレイ可能ゲーム:
+</h3>
+<ul class="space-y-3">
+<li class="game-card bg-white border border-gray-100 rounded p-3 flex items-center transition-all duration-200">
+<div class="w-8 h-8 flex items-center justify-center bg-red-400/10 rounded mr-3">
+<i class="ri-skull-line text-red-400"></i>
+</div>
+<span>デッドバイデイライト</span>
+</li>
+<li class="game-card bg-white border border-gray-100 rounded p-3 flex items-center transition-all duration-200">
+<div class="w-8 h-8 flex items-center justify-center bg-indigo-400/10 rounded mr-3">
+<i class="ri-knife-line text-indigo-400"></i>
+</div>
+<span>リーサルカンパニー</span>
+</li>
+<li class="game-card bg-white border border-gray-100 rounded p-3 flex items-center transition-all duration-200">
+<div class="w-8 h-8 flex items-center justify-center bg-blue-400/10 rounded mr-3">
+<i class="ri-building-line text-blue-400"></i>
+</div>
+<span>フォートナイト</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-white border-t border-gray-200 mt-auto">
+<div class="container mx-auto px-4 py-6">
+<div class="text-center text-gray-500 text-sm">
+<p>© 2025 ゲーマープロフィールプラットフォーム. All rights reserved.</p>
+<p class="mt-1">最終更新: 2025年5月9日</p>
+</div>
+</div>
+</footer>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const gameCards = document.querySelectorAll('.game-card');
+gameCards.forEach(card => {
+card.addEventListener('click', function() {
+// ゲーム詳細表示機能（将来実装予定）
+console.log('ゲーム詳細を表示: ' + this.querySelector('span').textContent);
+});
+});
+});
+</script>
+</body>
+</html>
